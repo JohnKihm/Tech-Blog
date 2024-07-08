@@ -8,7 +8,7 @@ async function createComment(event) {
     const content = document.querySelector('#content').value.trim();
     const post_id = document.querySelector('#post_id').value;
 
-    if (title && content) {
+    if (content) {
         const response = await fetch('/api/comments', {
             method: 'POST',
             body: JSON.stringify({ content, post_id }),

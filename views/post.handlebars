@@ -20,6 +20,9 @@
                     <label>Comment</label>
                     <input id="content" type="text" class="border-2 w-full h-10 p-2" />
                 </div>
+                <div class="hidden">
+                    <input id="post_id" type="text" value="{{post.id}}"/>
+                </div>
                 <div class="my-4">
                     <button type="submit" class="bg-indigo-500 p-2 rounded text-white font-bold w-full">Submit</button>
                 </div>
@@ -42,7 +45,5 @@
         + Add Comment
     </button>
 </div>
-
-<div id="post_id" value="{{post.id}}"></div>
 
 <script src="/js/createComment.js"></script>
