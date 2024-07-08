@@ -9,6 +9,24 @@
         </p>
     </div>
 </div>
+<dialog id="comment-form" class="w-full bg-cyan-200">
+    <div class="flex-col border-4 border-emerald-800 my-6 mx-16">
+        <div class="flex justify-between items-center py-3 px-5 bg-emerald-800 text-cyan-200">
+            <p class="text-3xl">Add Comment</p>
+        </div>
+        <div class="py-3 px-5">
+            <form class="flex-col text-2xl">
+                <div class="my-4">
+                    <label>Comment</label>
+                    <input id="content" type="text" class="border-2 w-full h-10 p-2" />
+                </div>
+                <div class="my-4">
+                    <button type="submit" class="bg-indigo-500 p-2 rounded text-white font-bold w-full">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</dialog>
 {{#each comments as |comment| }}
 <div class="comment flex-col border-4 border-emerald-800 my-6 mx-16 text-xl p-5">
     <p class="my-4">
@@ -19,3 +37,13 @@
     </p>
 </div>
 {{/each}}
+<div class="flex justify-center items-center">
+    <button id="comment-button" class="text-3xl bg-emerald-800 text-cyan-200 py-4 px-8 border-2 rounded-lg">
+        + Add Comment
+    </button>
+</div>
+
+<div id="user_id" value="{{user_id}}"></div>
+<div id="post_id" value="{{post.id}}"></div>
+
+<script src="./js/createComment.js"></script>

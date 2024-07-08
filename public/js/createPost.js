@@ -19,3 +19,5 @@ async function createPost(event) {
         }
     }
 }
+
+document.querySelector('form').addEventListener('submit', createPost);
