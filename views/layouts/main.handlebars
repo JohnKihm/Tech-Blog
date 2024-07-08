@@ -4,21 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>The Tech Blog</title>
 </head>
 
 <body>
-    <div>
-        <header>
-            <nav>
+    <div class="flex-col justify-around h-dvh">
+        <header class="flex-col justify-between items-center p-2 bg-emerald-800">
+            <nav class="text-xl text-cyan-200 flex justify-between max-w-md p-2 mx-3">
                 <a href="">Home</a>
                 <a href="">Dashboard</a>
                 <a href="">Login</a>
                 <a href="">Logout</a>
             </nav>
-            <h1>The Tech Blog</h1>
+            <div class="flex p-2 mx-3">
+                <h1 class="text-4xl text-emerald-800 font-bold bg-cyan-200 p-2 rounded-lg">The Tech Blog</h1>
+            </div>
         </header>
-        <main>
+        <main class="h-full bg-cyan-200">
             <!-- Render the sub layout -->
             {{{ body }}}
         </main>
