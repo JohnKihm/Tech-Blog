@@ -1,36 +1,11 @@
-<div class="flex justify-center p-2">
-    <h1 class="text-4xl bg-emerald-800 font-bold text-cyan-200 p-2 rounded-lg">Your Dashboard</h1>
-</div>
-<dialog id="new-post-form" class="w-full bg-cyan-200">
-    <div class="flex-col border-4 border-emerald-800 my-6 mx-16">
-        <div class="flex justify-between items-center py-3 px-5 bg-emerald-800 text-cyan-200">
-            <p class="text-3xl">Create New Post</p>
-        </div>
-        <div class="py-3 px-5">
-            <form class="flex-col text-2xl">
-                <div class="my-4">
-                    <label>Title</label>
-                    <input id="title" type="text" class="border-2 w-full h-10 p-2" />
-                </div>
-                <div class="my-4">
-                    <label>Content</label>
-                    <input id="password" type="text" class="border-2 w-full h-10 p-2" />
-                </div>
-                <div class="my-4">
-                    <button type="submit" class="bg-indigo-500 p-2 rounded text-white font-bold w-full">Create</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</dialog>
 {{#each posts as |post| }}
 <div class="flex justify-between items-center py-3 px-5 my-6 mx-16 border-2 rounded-lg bg-gray-800 text-cyan-200">
     <p class="text-2xl">{{post.title}}</p>
     <p class="text-2xl">{{format_date post.date_created}}</p>
 </div>
 {{/each}}
-<div class="flex justify-center items-center">
+<a href="/dashboard/create-post" class="flex justify-center items-center">
     <button id="new-post-button" class="text-3xl bg-emerald-800 text-cyan-200 py-4 px-8 border-2 rounded-lg">
         + New Post
     </button>
-</div>
+</a>
