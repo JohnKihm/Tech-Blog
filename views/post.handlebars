@@ -1,0 +1,21 @@
+<div class="post flex-col border-4 border-emerald-800 my-6 mx-16">
+    <div class="flex justify-between items-center py-3 px-5 bg-emerald-800 text-cyan-200">
+        <p class="text-3xl">{{post.name}}</p>
+        <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
+    </div>
+    <div>
+        <p class="text-xl p-5">
+            {{post.content}}
+        </p>
+    </div>
+</div>
+{{#each comments as |comment| }}
+<div class="comment flex-col border-4 border-emerald-800 my-6 mx-16 text-xl p-5">
+    <p class="my-4">
+        {{comment.content}}
+    </p>
+    <p class="my-4">
+        -{{comment.user.name}}, {{format_date comment.date_created}}
+    </p>
+</div>
+{{/each}}
