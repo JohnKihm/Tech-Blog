@@ -3,12 +3,11 @@ async function createPost(event) {
 
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
-    const user_id = document.querySelector('#user_id').value;
 
     if (title && content) {
         const response = await fetch('/api/posts', {
             method: 'POST',
-            body: JSON.stringify({ title, content, user_id }),
+            body: JSON.stringify({ title, content }),
             headers: { 'Content-Type': 'application/json' }
         });
 
