@@ -23,8 +23,11 @@ router.get('/', withAuth, async (req, res) => {
 
 router.get('/create-post', withAuth, async (req, res) => {
     try {
+        const user_id = req.session.user_id;
+
         res.render('create-post', {
-            layout: 'dashboard'
+            layout: 'dashboard',
+            data: { user_id }
         });
     } catch (err) {
         res.status(500).json(err);
