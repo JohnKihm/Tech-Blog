@@ -1,8 +1,8 @@
 {{#each posts as |post| }}
-<div class="flex justify-between items-center py-3 px-5 my-6 mx-16 border-2 rounded-lg bg-gray-800 text-cyan-200">
+<a href="/edit-post/{{post.id}}" class="flex justify-between items-center py-3 px-5 my-6 mx-16 border-2 rounded-lg bg-gray-800 text-cyan-200">
     <p class="text-2xl">{{post.title}}</p>
     <p class="text-2xl">{{format_date post.date_created}}</p>
-</div>
+</a>
 {{/each}}
 <a href="/dashboard/create-post" class="flex justify-center items-center">
     <button class="text-3xl bg-emerald-800 text-cyan-200 py-4 px-8 border-2 rounded-lg">

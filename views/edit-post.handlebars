@@ -10,12 +10,16 @@
             </div>
             <div class="my-4">
                 <label>Content</label>
-                <input id="password" type="text" class="border-2 w-full h-10 p-2" value="{{post.content}}" />
+                <input id="content" type="text" class="border-2 w-full h-10 p-2" value="{{post.content}}" />
             </div>
             <div class="my-4">
                 <button type="submit" class="bg-indigo-500 p-2 rounded text-white font-bold w-full">Update Post</button>
             </div>
         </form>
-        <button type="submit" class="bg-indigo-500 p-2 rounded text-white font-bold w-full">Delete</button>
+        <button id="delete-button" class="bg-indigo-500 p-2 rounded text-white font-bold w-full">Delete</button>
     </div>
 </div>
+
+<div id="post_id" value="{{post.id}}"></div>
+
+<script src="./js/editPost.js"></script>
