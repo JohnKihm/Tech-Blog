@@ -21,4 +21,14 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
+router.get('/create-post', withAuth, async (req, res) => {
+    try {
+        res.render('create-post', {
+            layout: 'dashboard'
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
