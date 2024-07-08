@@ -17,10 +17,8 @@ router.get('/', async (req, res) => {
 
         res.render('homepage', {
             layout: 'main',
-            data: {
-                posts,
-                logged_in: req.session.logged_in
-            }
+            posts,
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -56,11 +54,9 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
         res.render('post', {
             layout: 'main',
-            data: {
-                post,
-                comments,
-                logged_in: req.session.logged_in
-            }
+            post,
+            comments,
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);

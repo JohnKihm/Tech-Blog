@@ -14,7 +14,7 @@ router.get('/', withAuth, async (req, res) => {
 
         res.render('dashboard', {
             layout: 'dashboard',
-            data: { posts }
+            posts
         });
     } catch (err) {
         res.status(500).json(err);
@@ -39,7 +39,7 @@ router.get('/edit-post/:id', withAuth, async (req, res) => {
         
         res.render('edit-post', {
             layout: 'dashboard',
-            data: { post }
+            post
         });
     } catch (err) {
         res.status(500).json(err);
