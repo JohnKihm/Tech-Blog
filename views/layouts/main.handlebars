@@ -12,10 +12,14 @@
     <div class="flex-col justify-around h-dvh">
         <header class="flex-col justify-between items-center p-2 bg-emerald-800">
             <nav class="text-xl text-cyan-200 flex justify-between max-w-md p-2 mx-3">
-                <a href="">Home</a>
-                <a href="">Dashboard</a>
-                <a href="">Login</a>
-                <a href="">Logout</a>
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                <!-- Render login or logout button depending on user's status -->
+                {{#if logged_in}}
+                <button id="logout">Logout</button>
+                {{else}}
+                <a href="/login">Login</a>
+                {{/if}}
             </nav>
             <div class="flex p-2 mx-3">
                 <h1 class="text-4xl text-emerald-800 font-bold bg-cyan-200 p-2 rounded-lg">The Tech Blog</h1>
@@ -26,6 +30,10 @@
             {{{ body }}}
         </main>
     </div>
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
