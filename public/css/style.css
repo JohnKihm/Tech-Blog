@@ -1,0 +1,54 @@
+:root {
+    --color1: #F9DBC8;
+    --color2: #3A6A57;
+    --color3: #173F40;
+    --color4: #0F0706;
+}
+
+.text-c1 {
+    color: var(--color1);
+}
+
+.text-c2 {
+    color: var(--color2);
+}
+
+.text-c3 {
+    color: var(--color3);
+}
+
+.text-c4 {
+    color: var(--color4);
+}
+
+.bg-c1 {
+    background-color: var(--color1);
+}
+
+.bg-c2 {
+    background-color: var(--color2);
+}
+
+.bg-c3 {
+    background-color: var(--color3);
+}
+
+.bg-c4 {
+    background-color: var(--color4);
+}
+
+.border-c1 {
+    border-color: var(--color1);
+}
+
+.border-c2 {
+    border-color: var(--color2);
+}
+
+.border-c3 {
+    border-color: var(--color3);
+}
+
+.border-c4 {
+    border-color: var(--color4);
+}

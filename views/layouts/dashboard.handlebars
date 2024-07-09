@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/output.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <title>Your Dashboard</title>
 </head>
 
 <body>
     <div class="flex-col justify-around h-dvh">
-        <header class="flex-col justify-between items-center p-2 bg-emerald-800">
-            <nav class="text-xl text-cyan-200 flex justify-between max-w-md p-2 mx-3">
+        <header class="flex-col justify-between items-center p-2 bg-c3">
+            <nav class="text-xl text-c1 flex justify-between max-w-md p-2 mx-3">
                 <a href="/">Home</a>
                 <a href="/dashboard">Dashboard</a>
                 <!-- Users must be logged in to access dashboard so logout button is always rendered -->
                 <button id="logout">Logout</button>
             </nav>
             <div class="flex p-2 mx-3">
-                <h1 class="text-4xl text-emerald-800 font-bold bg-cyan-200 p-2 rounded-lg">Your Dashboard</h1>
+                <h1 class="text-4xl text-c3 font-bold bg-c1 p-2 rounded-lg">Your Dashboard</h1>
             </div>
         </header>
-        <main class="min-h-full bg-cyan-200 py-3">
+        <main class="min-h-full bg-c1 py-3">
             <!-- Render the sub layout -->
             {{{ body }}}
         </main>

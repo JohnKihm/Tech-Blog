@@ -1,22 +1,22 @@
-<div class="post flex-col border-4 border-emerald-800 my-6 mx-16">
-    <div class="flex justify-between items-center py-3 px-5 bg-emerald-800 text-cyan-200">
+<div class="post flex-col border-4 border-c2 my-6 mx-16">
+    <div class="flex justify-between items-center py-3 px-5 bg-c2 text-c1">
         <p class="text-3xl">{{post.title}}</p>
         <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
     </div>
     <div>
-        <p class="text-xl p-5">
+        <p class="text-xl text-c4 p-5">
             {{post.content}}
         </p>
     </div>
 </div>
-<dialog id="comment-form" class="w-full bg-cyan-200">
-    <div class="flex-col border-4 border-emerald-800 my-6 mx-16">
-        <div class="flex justify-between items-center py-3 px-5 bg-emerald-800 text-cyan-200">
+<dialog id="comment-form" class="w-full bg-c1">
+    <div class="flex-col border-4 border-c2 my-6 mx-16">
+        <div class="flex justify-between items-center py-3 px-5 bg-c2 text-c1">
             <p class="text-3xl">Add Comment</p>
         </div>
         <div class="py-3 px-5">
             <form class="flex-col text-2xl">
-                <div class="my-4">
+                <div class="my-4 text-c4">
                     <label>Comment</label>
                     <input id="content" type="text" class="border-2 w-full h-10 p-2" />
                 </div>
@@ -24,24 +24,24 @@
                     <input id="post_id" type="text" value="{{post.id}}"/>
                 </div>
                 <div class="my-4">
-                    <button type="submit" class="bg-indigo-500 p-2 rounded text-white font-bold w-full">Submit</button>
+                    <button type="submit" class="bg-c3 p-2 rounded text-c1 font-bold w-full">Submit</button>
                 </div>
             </form>
         </div>
     </div>
 </dialog>
 {{#each comments as |comment| }}
-<div class="comment flex-col border-4 border-emerald-800 my-6 mx-16 text-xl p-5">
-    <p class="my-4">
+<div class="comment flex-col border-4 border-c2 my-6 mx-16 text-xl p-5">
+    <p class="my-4 text-c4">
         {{comment.content}}
     </p>
-    <p class="my-4">
+    <p class="my-4 text-c4">
         -{{comment.user.name}}, {{format_date comment.date_created}}
     </p>
 </div>
 {{/each}}
 <div class="flex justify-center items-center">
-    <button id="comment-button" class="text-3xl bg-emerald-800 text-cyan-200 py-4 px-8 border-2 rounded-lg">
+    <button id="comment-button" class="text-3xl bg-c2 text-c1 py-4 px-8 border-2 rounded-lg">
         + Add Comment
     </button>
 </div>

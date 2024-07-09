@@ -1,13 +1,13 @@
 {{#each posts as |post| }}
-<div class="post flex-col border-4 border-emerald-800 my-6 mx-16">
-    <div class="flex justify-between items-center py-3 px-5 bg-emerald-800 text-cyan-200">
+<div class="post flex-col border-4 border-c2 my-6 mx-16">
+    <div class="flex justify-between items-center py-3 px-5 bg-c2 text-c1">
         <p class="text-3xl">
             <a href="/post/{{post.id}}">{{post.title}}</a>
         </p>
         <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
     </div>
     <div>
-        <p class="text-xl p-5">
+        <p class="text-xl text-c4 p-5">
             {{post.content}}
         </p>
     </div>
