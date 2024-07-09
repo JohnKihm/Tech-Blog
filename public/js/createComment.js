@@ -1,5 +1,11 @@
+const commentForm = document.querySelector('#comment-form');
+
 document.querySelector('#comment-button').addEventListener('click', () => {
-    document.querySelector('#comment-form').showModal();
+    commentForm.showModal();
+});
+
+document.querySelector('#close-button').addEventListener('click', () => {
+    commentForm.close();
 });
 
 async function createComment(event) {
